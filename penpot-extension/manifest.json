@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Penpot Exporter",
+  "version": "0.1.0",
+  "description": "Export designs directly to Penpot from Chrome.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
