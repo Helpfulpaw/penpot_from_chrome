@@ -3,6 +3,7 @@
   "name": "Penpot Exporter",
   "version": "0.1.0",
   "description": "Export designs directly to Penpot from Chrome.",
+  "permissions": ["tabs"],
   "action": {
     "default_popup": "popup.html"
   },

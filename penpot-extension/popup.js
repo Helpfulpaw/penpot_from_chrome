@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   exportButton.addEventListener('click', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.tabs.sendMessage(tabs[0].id, { action: 'export' });
+      chrome.tabs.sendMessage(tabs[0].id, { action: 'export' }, () => {
+        if (chrome.runtime.lastError) {
+          console.error('Error sending message:', chrome.runtime.lastError);
+        }
+      });
     });
   });
 });
