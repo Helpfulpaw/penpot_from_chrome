@@ -8,4 +8,6 @@ Work in progress. The extension lives in the `penpot-extension/` directory.
 
 ## Development
 Clone the repo and install dependencies with `npm install`. Load the extension
-in Chrome using the `penpot-extension/` folder.
+in Chrome using the `penpot-extension/` folder. When testing the popup, make
+sure the active tab is a normal webpage (not a Chrome Web Store or
+`chrome://` page) so that the content script can receive messages.
